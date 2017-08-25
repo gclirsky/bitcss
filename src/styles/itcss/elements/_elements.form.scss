@@ -1,0 +1,13 @@
+form label {
+    display: block;
+    margin: 20px 0px;
+}
+
+form label.input,
+form label.input input {
+    cursor: pointer;
+}
+
+form .btns {
+    text-align: center;
+}

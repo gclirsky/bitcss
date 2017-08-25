@@ -1,0 +1,46 @@
+footer {
+    font-family: 'Roboto';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+
+footer .f-logo {
+    float: left;
+}
+
+footer ul {
+    max-width: 325px;
+}
+
+footer ul li {
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    list-style: disc outside;
+    margin-left: 25px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+footer ul li:first-child {
+    list-style: none;
+    margin-left: 0px;
+}
+
+footer strong {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+footer .copyright {
+    margin-top: 125px;
+    text-align: right;
+}
+
+footer>div {
+    padding: 20px;
+}

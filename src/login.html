@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Header Layout">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Shell</title>
+
+    <!-- include ROBOTO font from cdn -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <!-- custom styles - refactor by ITCSS -->
+
+</head>
+
+<body>
+    <main>
+        <div id="loginDiv" class="card">
+            <form class="content primary" id="loginForm" name="loginForm" method="post" action="login.html">
+                <label for="username">Username
+                            <input type="text" id="username" name="username" placeholder="Username" />
+                        </label>
+                <label for="password">Password
+                            <input type="password" id="password" name="password" placeholder="Password" />
+                        </label>
+
+                <label for="changePassword" class="input">
+                            <input type="checkbox" id="changePassword" value="1" />
+                            Change Password
+                        </label>
+                <label for="changeWorkspace" class="input">
+                            <input type="checkbox" id="changeWorkspace" value="1" />
+                            Change Primary Workspace
+                        </label>
+
+                <div class="btns">
+                    <button type="submit" class="raised">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="f-logo">
+            <img src="./assets/logo.png" />
+            <strong>Master Complexity</strong>
+            <ul>
+                <li>Technology</li>
+                <li>Strategic Advisory</li>
+                <li>Operations</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2017 Systems, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

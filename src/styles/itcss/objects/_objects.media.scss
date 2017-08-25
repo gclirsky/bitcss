@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px) {
+    footer {
+        height: 220px;
+    }
+    footer ul {
+        margin: auto;
+    }
+    footer .f-logo {
+        float: none;
+        text-align: center;
+    }
+    footer .copyright {
+        margin-top: 0px;
+        text-align: center;
+    }
+}
