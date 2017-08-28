@@ -1,0 +1,37 @@
+{
+    "name": "bitcss",
+    "version": "0.0.1",
+    "description": "demo with itcss, sass and bem",
+    "main": "./src/styles/itcss/main.scss",
+    "scripts": {
+        "test": "npm run lint && mocha test/run.js",
+        "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss",
+        "sass": "./node_modules/.bin/node-sass -w \"./src/styles/itcss/\" -o \"./src/assets/style/\""
+    },
+    "keywords": [
+        "oocss",
+        "sass",
+        "bem",
+        "itcss",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "xxx"
+    },
+    "author": {
+        "email": "taocui@hengtiansoft.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "^3.5.0",
+        "node-sass": "^4.5.3",
+        "sass-lint": "^1.11.0",
+        "sass-true": "^3.0.0",
+        "stylelint": "~8.0.0",
+        "stylelint-scss": "^2.1.0"
+    },
+    "dependencies": {
+        "normalize-scss": "^7.0.0"
+    }
+}

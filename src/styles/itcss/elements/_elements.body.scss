@@ -1,3 +1,8 @@
 body {
-    background: url("./background.jpg") no-repeat center/cover;
+    background: url("../assets/images/background.jpg") no-repeat center/cover;
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; // TODO: extract to _settings.global 16px (1em)
 }
