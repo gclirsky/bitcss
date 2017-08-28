@@ -17,10 +17,11 @@
     ],
     "repository": {
         "type": "git",
-        "url": "xxx"
+        "url": "git+https://github.com/ginocui/bitcss.git"
     },
     "author": {
-        "email": "taocui@hengtiansoft.com"
+        "email": "gino.cui@gmail.com",
+        "name": "Gino Cui"
     },
     "license": "MIT",
     "devDependencies": {
