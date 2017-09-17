@@ -1,8 +1,12 @@
 example.html
 *.css
+*.map
 *.gz
 node_modules/
 bower_components/
 test/*.css
 .sass-cache
-.DS_Store
+*.bundle.js
+dist/
+.idea
+

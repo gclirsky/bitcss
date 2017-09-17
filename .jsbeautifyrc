@@ -1,0 +1,27 @@
+{
+    "end_with_newline": true,
+    "css": {
+        "indent_size": 4,
+        "indent_char": " ",
+        "preserve_newlines": true,
+        "max_preserve_newlines": 1,
+        // Add a new line after every css rule
+        "newline_between_rules": true,
+
+        // Selector separator character
+        "selector_separator": " ",
+
+        // Separate selectors with newline or not (e.g. "a,\nbr" or "a, br")
+        "selector_separator_newline": true
+    },
+    "custom": {
+        // Rules added here apply only to some files matching specific glob strings.
+        // For the following entries, keys are globs and values are objects which
+        // can contain any kind of .jsbeautifyrc setting. They take precedence over
+        // all of the above settings.
+        "*.scss": {
+            "indent_size": 4,
+            "brace_style": "collapse"
+        }
+    }
+}

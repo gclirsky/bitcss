@@ -2,11 +2,15 @@
     "name": "bitcss",
     "version": "0.0.1",
     "description": "demo with itcss, sass and bem",
-    "main": "./src/styles/itcss/main.scss",
+    "main": "./src/js/index.js",
     "scripts": {
         "test": "npm run lint && mocha test/run.js",
         "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss",
-        "sass": "./node_modules/.bin/node-sass -w \"./src/styles/itcss/\" -o \"./src/assets/style/\""
+        "sass": "./node_modules/.bin/node-sass -w \"./src/styles/itcss/\" -o \"./src/assets/style/\"",
+        "start": "./node_modules/.bin/webpack-dev-server",
+        "watch": "./node_modules/.bin/webpack --watch --verbose -d --config webpack.config.dev.js",
+        "build": "./node_modules/.bin/webpack -d --verbose",
+        "serve": "node \"./src/app/server.js\""
     },
     "keywords": [
         "oocss",
@@ -25,14 +29,32 @@
     },
     "license": "MIT",
     "devDependencies": {
+        "clean-webpack-plugin": "^0.1.16",
+        "css-loader": "^0.28.5",
+        "express": "^4.15.3",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "file-loader": "^0.11.2",
+        "glob": "^7.0.5",
+        "html-loader": "^0.5.1",
+        "html-webpack-plugin": "^2.30.1",
+        "jquery": "^3.2.1",
         "mocha": "^3.5.0",
         "node-sass": "^4.5.3",
-        "sass-lint": "^1.11.0",
+        "normalize-scss": "^7.0.0",
+        "resolve-url-loader": "^2.1.0",
+        "sass-lint": "^1.11.1",
+        "sass-loader": "~6.0.6",
         "sass-true": "^3.0.0",
+        "script-loader": "^0.7.0",
+        "style-loader": "^0.18.2",
         "stylelint": "~8.0.0",
-        "stylelint-scss": "^2.1.0"
+        "stylelint-scss": "^2.1.0",
+        "webpack": "~3.5.5",
+        "webpack-dev-middleware": "^1.12.0",
+        "webpack-dev-server": "~2.7.1"
     },
     "dependencies": {
-        "normalize-scss": "^7.0.0"
+        "normalize-scss": "^7.0.0",
+        "jquery": "^3.2.1"
     }
 }
