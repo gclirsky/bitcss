@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.0;
+            background: #ddd;
+        }
+
+        .header {
+            font-size: 1rem;
+            /* avoid rem dupplication issues to use em instead */
+            padding: 0.5em 0.75rem;
+            /* padding: 0.5rem 0.75rem; */
+            background: #7F7CFF;
+        }
+
+        .header--large {
+            font-size: 2rem;
+            /* use rem twice against .header for each time scale, it cause duplication and super complex code */
+            /* padding: 1rem 1.5rem; */
+        }
+
+        p {
+            margin-left: 0.75em;
+            margin-right: 0.75em;
+        }
+
+        .component {
+            background: white;
+            border: 2px solid #7F7CFF;
+            width: 100%;
+        }
+
+        @media (min-width: 1200px) {
+            .component {
+                font-size: 1.5em;
+            }
+        }
+
+        .component__header {
+            font-size: 2em;
+            padding: 0.5em 1.5rem;
+            background: #7F7CFF;
+            margin: 0;
+        }
+
+        .component p {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .component--small .component__header {
+            font-size: 1em;
+        }
+
+        .component+.component {
+            margin-top: 2rem;
+        }
+
+        .l-cs {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            /* overflow: hidden; */
+            margin-left: -1em;
+            margin-right: -1em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .l-cs>div {
+            margin: 1em;
+        }
+
+        .l-cs>div:first-child {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-preferred-size: calc(66.66667% - 2em);
+            flex-basis: calc(66.66667% - 2em);
+        }
+
+        .l-cs>div:last-child {
+            -ms-flex-preferred-size: calc(33.33333% - 2em);
+            flex-basis: calc(33.33333% - 2em);
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <div class="header header--large">A Header Element</div>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        Mauris placerat eleifend leo</p>
+
+    <div class="header">A Header Element</div>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        Mauris placerat eleifend leo</p> -->
+    <!--
+    <div class="component">
+        <div class="component__header">Component Title</div>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+            est. Mauris placerat eleifend leo</p>
+    </div>
+
+    <div class="component component--small">
+        <div class="component__header">Component Title</div>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+            est. Mauris placerat eleifend leo</p>
+    </div> -->
+
+
+
+    <div class="l-cs">
+        <div>
+            <div class="component">
+                <h2 class="component__header">Component Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsa, nam harum sed blanditiis numquam assumenda consequuntur alias laborum aut, officiis repellat sapiente eos corrupti, quam iure vitae incidunt illo!</p>
+            </div>
+        </div>
+        <div>
+            <div class="component component--small">
+                <h2 class="component__header">Component Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et dicta explicabo quibusdam voluptatem porro ea! Eligendi.</p>
+            </div>
+            <div class="component component--small">
+                <h2 class="component__header">Component Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et dicta explicabo quibusdam voluptatem porro ea! Eligendi.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
