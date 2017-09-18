@@ -1,0 +1,60 @@
+// Remove default Radio Buttons
+input[type="radio"]:not(:checked),
+input[type="radio"]:checked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+input[type="radio"]:not(:checked) + label,
+input[type="radio"]:checked + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+}
+
+input[type="radio"] + label:before,
+input[type="radio"] + label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    z-index: 0;
+    transition: 0.28s ease;
+}
+
+// Unchecked styles
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:before,
+input[type="radio"]:checked + label:after {
+    border-radius: 50%;
+}
+
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:not(:checked) + label:after {
+    border: 2px solid $disabled-color;
+}
+
+input[type="radio"]:not(:checked) + label:after {
+    transform: scale(0);
+}
+
+// Checked styles - Shared
+input[type="radio"]:checked + label:before,
+input[type="radio"]:checked + label:after {
+    border: 2px solid $primary-action-color;
+}
+
+// Checked styles - Inner circle
+input[type="radio"]:checked + label:after {
+    background-color: $primary-action-color;
+    transform: scale(0.5);
+}

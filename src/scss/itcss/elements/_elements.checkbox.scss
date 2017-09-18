@@ -1,0 +1,60 @@
+$checkbox-size: 18px;
+$checkbox-radius: 2px;
+$label-size: 25px;
+
+input[type='checkbox'] {
+    // Remove default checkbox
+    display: none;
+
+    // Text Label Style
+    & + label {
+        position: relative;
+        display: inline-block;
+        padding-left: 35px;
+        height: $label-size;
+        line-height: $label-size;
+
+        // TODO: value?
+        font-size: 1rem;
+        vertical-align: middle;
+
+        &:not([disabled]) {
+            cursor: pointer;
+        }
+    }
+
+    // Checkbox - rectangular
+    & + label:after,
+    &:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        border: 2px solid $primary-action-color;
+        border-radius: $checkbox-radius;
+    }
+
+    &:checked + label:after {
+        background-color: $primary-action-color;
+        z-index: 0;
+    }
+
+    // Checkbox  - tick
+    &:checked + label:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1px;
+        width: 5px;
+        height: 13px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        transform: rotateZ(37deg);
+        transform-origin: 100% 100%;
+        z-index: 1;
+    }
+}

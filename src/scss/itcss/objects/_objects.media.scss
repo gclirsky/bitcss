@@ -1,14 +1,56 @@
+// @import "mixins/objects.grid";
+
+.o-media {
+    @include grid;
+}
+
+.o-media .c-heading {
+    padding: 0;
+}
+
+.o-media__image,
+.o-media__body {
+    @include grid__cell;
+    @include grid__cell--no-gutter;
+
+    &--top {
+        @include grid__cell--top;
+    }
+
+    &--center {
+        @include grid__cell--center;
+    }
+
+    &--bottom {
+        @include grid__cell--bottom;
+    }
+}
+
+.o-media__image {
+    @include grid__cell--width-fixed;
+
+    width: $media-image-width;
+}
+
+.o-media__body {
+    margin-left: $media-body-margin-left;
+}
+
+/*****keep********/
 @media only screen and (max-width: 768px) {
     footer {
         height: 220px;
     }
+
     footer ul {
         margin: auto;
     }
+
     footer .f-logo {
         float: none;
         text-align: center;
     }
+
     footer .copyright {
         margin-top: 0px;
         text-align: center;

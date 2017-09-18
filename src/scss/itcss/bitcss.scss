@@ -1,35 +1,20 @@
 // SETTINGS
-@import 'settings/settings.global';
-@import 'settings/settings.config';
-@import 'settings/settings.header';
-@import 'settings/settings.footer';
+@import "settings";
+
 // TOOLS
-@import 'tools/tools.clearfix';
+@import "tools";
+
 // GENERIC
-@import 'generic/generic.box-sizing';
-@import 'generic/generic.normalize';
-@import 'generic/generic.reset';
-@import 'generic/generic.shared';
+@import "generic";
+
 // ELEMENTS
-@import 'elements/elements.body';
-@import 'elements/elements.footer';
-@import 'elements/elements.form';
-@import 'elements/elements.headings';
-@import 'elements/elements.html';
-@import 'elements/elements.links';
-@import 'elements/elements.lists';
-@import 'elements/elements.main';
-@import 'elements/elements.nav';
-@import 'elements/elements.tables';
+@import "elements";
+
 // OBJECTS
-@import 'objects/objects.layout';
-@import 'objects/objects.media';
-@import 'objects/objects.table';
+@import "objects";
+
 // COMPONENTS
-//
-// Build and include your project’s UI Compoments here.
-@import 'components/component.button';
-@import 'components/component.footer';
+@import "components";
+
 // UTILITIES
-@import 'utilities/utilities.align';
-@import 'utilities/utilities.color';
+@import "utilities";
